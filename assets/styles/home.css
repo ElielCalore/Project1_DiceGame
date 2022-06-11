@@ -1,0 +1,58 @@
+/* Rectangle 1 */
+
+.dado {
+    /* Rectangle 1 */
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: 467px;
+    top: 423px;
+}
+
+.diceFirstPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 - 617.5px);
+    top: calc(50% - 199px / 2 + 78.5px);
+}
+
+.diceSecondPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 - 371.5px);
+    top: calc(50% - 199px / 2 + 78.5px);
+}
+
+.diceThirdPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 - 125.5px);
+    top: calc(50% - 199px / 2 + 78.5px);
+}
+
+.diceFourthPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 + 120.5px);
+    top: calc(50% - 199px / 2 + 78.5px);
+}
+
+.diceFifthPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 + 366.5px);
+    top: calc(50% - 199px / 2 + 78.5px);
+}
+
+.diceSixthPosition {
+    position: absolute;
+    width: 199px;
+    height: 199px;
+    left: calc(50% - 199px / 2 + 612.5px);
+    top: calc(50% - 199px / 2 + 83.5px);
+}
