@@ -1,58 +1,238 @@
-/* Rectangle 1 */
-
-.dado {
-    /* Rectangle 1 */
-    position: absolute;
-    width: 199px;
-    height: 199px;
-    left: 467px;
-    top: 423px;
-}
-
 .diceFirstPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 - 617.5px);
-    top: calc(50% - 199px / 2 + 78.5px);
+    width: 176px;
+    height: 172px;
+    left: 473px;
+    top: 534px;
 }
 
 .diceSecondPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 - 371.5px);
-    top: calc(50% - 199px / 2 + 78.5px);
+    width: 176px;
+    height: 172px;
+    left: 872px;
+    top: 534px;
 }
 
 .diceThirdPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 - 125.5px);
-    top: calc(50% - 199px / 2 + 78.5px);
+    width: 176px;
+    height: 172px;
+    left: 473px;
+    top: 351px;
 }
 
 .diceFourthPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 + 120.5px);
-    top: calc(50% - 199px / 2 + 78.5px);
+    width: 176px;
+    height: 172px;
+    left: 872px;
+    top: 347px;
 }
 
 .diceFifthPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 + 366.5px);
-    top: calc(50% - 199px / 2 + 78.5px);
+    width: 176px;
+    height: 172px;
+    left: 473px;
+    top: 169px;
 }
 
 .diceSixthPosition {
     position: absolute;
-    width: 199px;
-    height: 199px;
-    left: calc(50% - 199px / 2 + 612.5px);
-    top: calc(50% - 199px / 2 + 83.5px);
+    width: 176px;
+    height: 172px;
+    left: 872px;
+    top: 167px;
 }
+
+.title_header {
+    /* Ironhack Dice Game */
+    position: absolute;
+    width: 393px;
+    height: 0px;
+    left: 559px;
+    top: 50px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.title_footer {
+    position: absolute;
+    width: 393px;
+    height: 52px;
+    left: 561px;
+    top: 861px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.textButton {
+    color: white;
+    font-size: 30px;
+}
+
+.buttonLefthPosition {
+    position: absolute;
+    width: 390px;
+    height: 76px;
+    left: 366px;
+    top: 720px;
+    background: black;
+    border: 3px solid green;
+    border-radius: 50px;
+}
+
+.buttonRightPosition {
+    position: absolute;
+    width: 390px;
+    height: 76px;
+    left: 765px;
+    top: 720px;
+    background: black;
+    border: 3px solid red;
+    border-radius: 50px;
+}
+
+.tag_header {
+    position: absolute;
+    width: 1512px;
+    height: 159px;
+    left: 0px;
+}
+
+.tag_footer {
+    position: absolute;
+    width: 1512px;
+    height: 159px;
+    left: 0px;
+    top: 823px;
+}
+
+.textScore {
+    position: absolute;
+    width: 88px;
+    height: 54px;
+    left: 1188px;
+    top: 347px;
+    font-family: "Sevillana";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.textPlayer1 {
+    position: absolute;
+    width: 153px;
+    height: 54px;
+    left: 1155px;
+    top: 396px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.textPlayer2 {
+    position: absolute;
+    width: 153px;
+    height: 54px;
+    left: 1155px;
+    top: 451px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.textPlayerRound {
+    position: absolute;
+    width: 143px;
+    height: 54px;
+    left: 223px;
+    top: 360px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.textPlayerRoundResult {
+    position: absolute;
+    width: 143px;
+    height: 54px;
+    left: 223px;
+    top: 437px;
+    font-family: "Sevillana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+#rulesPosition {
+    position: absolute;
+    width: 143px;
+    height: 54px;
+    left: 223px;
+    top: 169px;
+    font-size: 30px;
+    color: red;
+}
+
+
+/*
+.tag_score {
+    position: absolute;
+    width: 300px;
+    height: 314px;
+    left: 1212px;
+    top: 167px;
+}
+
+.tag_player {
+    position: absolute;
+    width: 300px;
+    height: 314px;
+    left: 0px;
+    top: 167px;
+}
+*/
