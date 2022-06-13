@@ -16,7 +16,7 @@
     </header>
     <main>
         <div>
-            <a href="./rules.html" id="rulesPosition">Rules</a>
+            <a href="./rules.html" class="rulesPosition">Rules</a>
         </div>
         <!-- <img src="./assets/images/image_tag_score.jpg" class="tag_score" /> -->
 
@@ -27,25 +27,29 @@
         <div class="textPlayerRoundResult">Player X</div>
 
         <!-- <img src="./assets/images/image_tag_player.jpg " class="tag_player" /> -->
+        <div>
+            <img src="./assets/images/image_given_one.jpg" id="diceFirstPosition" class="dice" />
+            <img src="./assets/images/image_given_two.jpg" id="diceSecondPosition" class="dice" />
+            <img src="./assets/images/image_given_three.jpg" id="diceThirdPosition" class="dice" />
+            <img src="./assets/images/image_given_four.jpg" id="diceFourthPosition" class="dice" />
+            <img src="./assets/images/image_given_five.jpg" id="diceFifthPosition" class="dice" />
+            <img src="./assets/images/image_given_six.jpg" id="diceSixthPosition" class="dice" />
+        </div>
 
-        <img src="./assets/images/image_given_one.jpg" class="diceFirstPosition" />
-        <img src="./assets/images/image_given_two.jpg" class="diceSecondPosition" />
-        <img src="./assets/images/image_given_three.jpg" class="diceThirdPosition" />
-        <img src="./assets/images/image_given_four.jpg" class="diceFourthPosition" />
-        <img src="./assets/images/image_given_five.jpg" class="diceFifthPosition" />
-        <img src="./assets/images/image_given_six.jpg" class="diceSixthPosition" />
-
-        <button type="submit" class="buttonLefthPosition textButton">
+        <button type="submit" class="textButton" id="buttonLefthPosition">
         Roll Dice
       </button>
-        <button type="submit" class="buttonRightPosition textButton">Stop</button>
+        <button type="submit" class="textButton" id="buttonRightPosition">
+        Stop
+      </button>
         <div class="dado"></div>
     </main>
     <footer>
         <img src="./assets/images/image_tag_footer.jpg" class="tag_footer" />
         <h1 class="title_footer">© All Rights Reserved To Eliel Calore</h1>
     </footer>
-    <script src="./dado.js"></script>
+    <script src="./assets/scripts/dice.js"></script>
+    <script src="./assets/scripts/index.js"></script>
 </body>
 
 </html>
