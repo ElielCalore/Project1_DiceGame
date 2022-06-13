@@ -1,30 +1,38 @@
 class dice {
     constructor() {
-        (this.array = []),
-        (this.imageFaceDice = [
+        (this.array = []), (this.score = []);
+        this.imageFaceDice = [
             "./assets/images/image_given_one.jpg",
             "./assets/images/image_given_two.jpg",
             "./assets/images/image_given_three.jpg",
             "./assets/images/image_given_four.jpg",
             "./assets/images/image_given_five.jpg",
             "./assets/images/image_given_six.jpg",
-        ]);
+        ];
     }
 
     generateNumberRandom() {
         return Math.floor(Math.random() * 6);
     }
 
-    diceShuffler() {
+    diceShuffler(index) {
         let dices = document.getElementsByClassName("dice");
-        let array;
+
         for (let i = 0; i < 6; i++) {
             let index = this.generateNumberRandom();
             dices[i].setAttribute("src", this.imageFaceDice[index]);
             this.array[i] = index;
         }
 
-        console.log(this.vectorComparison(this.array));
+        this.printScore(this.array, index);
+    }
+
+    printScore(array, index) {
+        let score = document.getElementsByClassName("score");
+        let player = document.getElementById("player");
+        let result = this.vectorComparison(array, index);
+        score[index].innerText = result;
+        // player[index].setAttribute("player", index);
     }
 
     calculateVectorComparison(number) {
@@ -42,11 +50,12 @@ class dice {
             return 60;
         }
     }
-    vectorComparison(array) {
+    vectorComparison(array, index) {
         let sum = 0;
         for (let i = 0; i < array.length; i++) {
             sum += this.calculateVectorComparison(array[i]);
         }
+        this.score[index] = this.score[index] + sum;
         return sum;
     }
 }
