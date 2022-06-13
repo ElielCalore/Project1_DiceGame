@@ -1,6 +1,6 @@
 class dice {
     constructor() {
-        (this.array = []), (this.score = []);
+        (this.array = []), (this.score = [0, 0]);
         this.imageFaceDice = [
             "./assets/images/image_given_one.jpg",
             "./assets/images/image_given_two.jpg",
@@ -32,8 +32,11 @@ class dice {
         let player = document.getElementById("player");
         let result = this.vectorComparison(array, index);
         score[index].innerText = result;
-        // player[index].setAttribute("player", index);
+        console.log("Player " + index + " pontos: " + this.score[index]);
+        // player.innerText = index.toString();
+        return result;
     }
+    stopRound(index) {}
 
     calculateVectorComparison(number) {
         if (number === 1) {

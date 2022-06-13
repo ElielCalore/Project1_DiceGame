@@ -4,6 +4,7 @@ const buttonLeft = document.getElementById("buttonLefthPosition");
 const buttonRight = document.getElementById("buttonRightPosition");
 let index = 0;
 let counter = 0;
+
 buttonLeft.addEventListener("click", (event) => {
     event.preventDefault();
     counter++;
@@ -11,7 +12,9 @@ buttonLeft.addEventListener("click", (event) => {
         if (counter <= 2) {
             newDice.diceShuffler(index);
         } else if (counter <= 4) {
+        buttonLeft.disabled = true;
         newDice.diceShuffler(index + 1);
+        buttonLeft.disabled = false;
     } else {
         counter = 0;
     }
