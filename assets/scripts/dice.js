@@ -30,10 +30,11 @@ class dice {
     printScore(array, index) {
         let score = document.getElementsByClassName("score");
         let player = document.getElementById("player");
+        let playerResult = document.getElementById("playerResult");
         let result = this.vectorComparison(array, index);
-        score[index].innerText = result;
-        console.log("Player " + index + " pontos: " + this.score[index]);
-        // player.innerText = index.toString();
+        score[index].innerText = this.score[index];
+        player.innerText = "Player: " + index.toString();
+        playerResult.innerText = "Points round: " + result.toString();
         return result;
     }
     stopRound(index) {}
