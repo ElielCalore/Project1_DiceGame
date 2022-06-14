@@ -43,7 +43,9 @@ class dice {
     }
     saveResult(sum, index) {
         this.score[index] = this.score[index] + sum;
-        console.log("Salvo: " + this.score[index]);
+        if (this.score[index] >= 1000) {
+            console.log("Champions o Player: " + index);
+        }
     }
     stopRound(index) {}
 

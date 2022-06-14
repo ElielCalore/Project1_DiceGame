@@ -225,3 +225,12 @@
 #player {}
 
 #playerResult {}
+
+.hidden {
+    display: none;
+    background-color: red;
+}
+
+.show {
+    display: flex;
+}
