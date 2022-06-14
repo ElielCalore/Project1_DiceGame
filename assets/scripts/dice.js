@@ -24,18 +24,21 @@ class dice {
             this.array[i] = index;
         }
 
-        this.printScore(this.array, index);
+        return this.array;
     }
 
-    printScore(array, index) {
+    printScore(sum, index) {
         let score = document.getElementsByClassName("score");
         let player = document.getElementById("player");
         let playerResult = document.getElementById("playerResult");
-        let result = this.vectorComparison(array, index);
+
         score[index].innerText = this.score[index];
         player.innerText = "Player: " + index.toString();
-        playerResult.innerText = "Points round: " + result.toString();
-        return result;
+        playerResult.innerText = "Points round: " + sum.toString();
+    }
+    saveResult(sum, index) {
+        this.score[index] = this.score[index] + sum;
+        console.log("Salvo: " + this.score[index]);
     }
     stopRound(index) {}
 
@@ -54,12 +57,12 @@ class dice {
             return 60;
         }
     }
-    vectorComparison(array, index) {
+    vectorComparison(array) {
         let sum = 0;
         for (let i = 0; i < array.length; i++) {
             sum += this.calculateVectorComparison(array[i]);
         }
-        this.score[index] = this.score[index] + sum;
+
         return sum;
     }
 }

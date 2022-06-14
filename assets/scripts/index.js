@@ -12,21 +12,50 @@ buttonLeft.addEventListener("click", (event) => {
     event.preventDefault();
     audio.play();
     counter++;
-    if (counter) audio.play();
-    if (counter <= 2) {
-        newDice.diceShuffler(index);
+    if (counter < 2) {
+        const returnNewDice = newDice.diceShuffler(index);
+        console.log(
+            "returnNewDice:" + returnNewDice + " typeof: " + typeof returnNewDice
+        );
+        const returnVectorComparison = newDice.vectorComparison(returnNewDice);
+        console.log(
+            "returnVectorComparison:" +
+            returnVectorComparison +
+            " typeof: " +
+            typeof returnVectorComparison
+        );
+        newDice.printScore(returnVectorComparison, index);
         audio.play();
-    } else if (counter <= 4) {
-        buttonLeft.disabled = true;
-        newDice.diceShuffler(index + 1);
+    } else if (counter == 2) {
+        const returnNewDice = newDice.diceShuffler(index);
+        const returnVectorComparison = newDice.vectorComparison(returnNewDice);
+        newDice.printScore(returnVectorComparison, index);
+        newDice.saveResult(returnVectorComparison, index);
+        audio.play();
+        buttonLeft.disabled = false;
+    } else if (counter < 4) {
+        const returnNewDice = newDice.diceShuffler(index + 1);
+        const returnVectorComparison = newDice.vectorComparison(returnNewDice);
+        newDice.printScore(returnVectorComparison, index + 1);
+        audio.play();
+
+        //buttonLeft.disabled = false;
+    } else if (counter == 4) {
+        // buttonLeft.disabled = true;
+        const returnNewDice = newDice.diceShuffler(index + 1);
+        const returnVectorComparison = newDice.vectorComparison(returnNewDice);
+        newDice.printScore(returnVectorComparison, index + 1);
+        newDice.saveResult(returnVectorComparison, index + 1);
+        audio.play();
         buttonLeft.disabled = false;
     } else {
+        buttonLeft.disabled = false;
         counter = 0;
-        audio.play();
     }
 });
 
 buttonRight.addEventListener("click", (event) => {
     event.preventDefault();
+
     console.log("a");
 });
