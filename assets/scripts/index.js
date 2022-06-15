@@ -7,6 +7,7 @@ let counter = 0;
 
 const url = "./assets/sounds/sound_dice_roll.mp3";
 const url2 = "./assets/sounds/stop.mp3";
+
 const audio = new Audio(url);
 const audio2 = new Audio(url2);
 
