@@ -15,7 +15,7 @@ let returnVectorComparison = 0;
 
 buttonLeft.addEventListener("click", (event) => {
     event.preventDefault();
-    // buttonRight.setAttribute("disabled", false);
+
     counter++;
     if (counter < 2) {
         audio.play();
@@ -55,21 +55,14 @@ buttonLeft.addEventListener("click", (event) => {
 
 buttonRight.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("button right");
     if (counter % 2 === 0) {
         audio2.play();
-        //newDice.saveResult(returnVectorComparison, index);
         newDice.printScore(returnVectorComparison, index);
         counter + 2;
-        //buttonRight.setAttribute("disabled", true);
-        console.log("dentro if");
     } else {
         audio2.play();
         newDice.saveResult(returnVectorComparison, index);
         newDice.printScore(returnVectorComparison, index);
         counter++;
-        console.log("dentro else");
-        //buttonRight.setAttribute("disabled", true);
     }
-    //  buttonRight.setAttribute("disabled", true);
 });

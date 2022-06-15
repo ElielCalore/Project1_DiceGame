@@ -44,10 +44,20 @@ class dice {
     saveResult(sum, index) {
         this.score[index] = this.score[index] + sum;
         if (this.score[index] >= 1000) {
+            const exchange = document.getElementsByClassName("show");
+            console.log(exchange);
+            exchange[0].setAttribute("class", "hidden");
+            this.restart();
+            //exchange.classList.add(show);
             console.log("Champions o Player: " + index);
         }
     }
-    stopRound(index) {}
+    restart() {
+        this.array = [];
+        this.score = [0, 0];
+        this.printScore(0, 0);
+        this.printScore(0, 1);
+    }
 
     calculateVectorComparison(number) {
         if (number === 0) {

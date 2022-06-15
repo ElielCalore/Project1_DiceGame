@@ -1,0 +1,14 @@
+.tag_header {
+    position: absolute;
+    width: 1512px;
+    height: 159px;
+    left: 0px;
+}
+
+.tag_footer {
+    position: absolute;
+    width: 1512px;
+    height: 159px;
+    left: 0px;
+    top: 823px;
+}
