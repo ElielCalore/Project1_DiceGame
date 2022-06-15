@@ -36,31 +36,31 @@ class dice {
         let score = document.getElementsByClassName("score");
         let player = document.getElementById("player");
         let playerResult = document.getElementById("playerResult");
-
         score[index].innerText = this.score[index];
         player.innerText = "Player: " + index.toString();
         playerResult.innerText = "Points round: " + sum.toString();
     }
     saveResult(sum, index) {
         this.score[index] = this.score[index] + sum;
-        if (this.score[index] >= 1000) {
-            const exchange = document.getElementsByClassName("show");
-            exchange[0].setAttribute("class", "hidden");
-            const message = "Player " + index + " is the Winner!!!";
-
-            const newDiv = document.createElement("div");
-
-            const newContent = document.createTextNode(message);
-
+        if (this.score[index] >= 5000) {
             const divCurrent = document.getElementById("newDiv");
-
-            divCurrent.appendChild(newDiv);
-            newDiv.innerText = message;
-
-            //divCurrent.appendChild(newContent); //adiciona o nó de texto à nova div criada
-
-            this.restart();
-            //exchange.classList.add(show);
+            console.log(divCurrent);
+            divCurrent.classList.add("hidden");
+            divCurrent.classList.remove("show");
+            const endGame = document.getElementById("endGame");
+            const message = "Player " + index + " is the Winner!!!";
+            endGame.innerText = message;
+            endGame.setAttribute("class", "show");
+            const newButton = document.createElement("button");
+            newButton.setAttribute("id", "buttonRestartHidden");
+            newButton.innerText = "Restart";
+            endGame.appendChild(newButton);
+            newButton.addEventListener("click", () => {
+                this.restart();
+                divCurrent.setAttribute("class", "show");
+                newButton.innerText = "";
+                endGame.setAttribute("class", "hidden");
+            });
             console.log("Champions o Player: " + index);
         }
     }

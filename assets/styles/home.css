@@ -108,14 +108,6 @@
     border-radius: 50px;
 }
 
-#buttonRestartPosition {
-    position: absolute;
-    width: 122px;
-    height: 87px;
-    left: 704px;
-    top: 570px;
-}
-
 .tag_header {
     position: absolute;
     width: 1512px;
@@ -226,6 +218,8 @@
     color: red;
 }
 
+
+/*
 .dice {}
 
 .score {}
@@ -233,6 +227,7 @@
 #player {}
 
 #playerResult {}
+*/
 
 .hidden {
     display: none;
@@ -243,12 +238,31 @@
     display: flex;
 }
 
-#newDiv {
+#buttonRestartHidden {
+    color: white;
+    font-size: 30px;
+    background: black;
+    border: 3px solid purple;
+    border-radius: 50px;
+}
+
+#buttonRestartShow {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+#endGame {
     position: absolute;
     width: 42px;
     height: 89px;
     left: 723px;
     top: 347px;
-    font-size: 20px;
+    font-size: 35px;
+    text-align: center;
     font-weight: bold;
 }
