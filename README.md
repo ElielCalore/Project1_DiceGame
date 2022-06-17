@@ -8,3 +8,5 @@ Simple game developed with DOM manipulation in pure Javascript Vanilla, HTML5 an
 This project is part of Ironhack's FullStack Web Development Bootcamp. For our first independent project, we were given the task of creating our own authorial game using the knowledge acquired during the first two weeks of the course.
 
 Link Slides: https://docs.google.com/presentation/d/e/2PACX-1vQJRG8i6HPlzFODaU3JwalbiyqkEJHirlLJDaSBl21XCd_16PA4ws7TGlrQ0FEDnlWRYzF5tuBRJ3lM/pub?start=false&loop=false&delayms=3000"
+
+Link Deployed: https://elielcalore.github.io/Project1_DiceGame/
